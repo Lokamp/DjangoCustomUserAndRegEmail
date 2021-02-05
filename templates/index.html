@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    {% if request.user.is_authenticated %}
+        <p>Hi {{ request.user.first_name }}</p> <p><a href="{% url 'logout' %}" class="nav-link font-weight-bold">Logout</a></p>
+    {% endif %}
+<p><a href="{% url 'registration' %}" class="nav-link font-weight-bold">Registration</a></p>
+</div>
+</body>
+</html>
